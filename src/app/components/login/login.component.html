@@ -1,0 +1,63 @@
+<!-- <div class="login-container">
+  <div class="login-wrapper">
+    <div class="login-illustration">
+      <img src="https://img.freepik.com/premium-photo/travel-vacation-tour-template-with-cartoon-illustration_982935-13993.jpg" alt="Illustration">
+    </div>
+    <div class="login-form">
+      <div class="card">
+        <div class="card-header text-center">
+          <h4>Login</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <input type="text" class="form-control" formControlName="lusername" id="username" placeholder="Username" required>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control" formControlName="lpass" id="password" placeholder="Password" required>
+            </div>
+            <div class="color-selection">
+              <input type="radio" id="red" name="color" value="red">
+              <label for="red" class="red-circle"></label>
+              <input type="radio" id="blue" name="color" value="blue">
+              <label for="blue" class="blue-circle"></label>
+              <input type="radio" id="green" name="color" value="green">
+              <label for="green" class="green-circle"></label>
+            </div>
+            <button type="submit" class="btn btn-login">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Webpage</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <input type="text" class="form-control" formControlName="lusername" id="username" placeholder="Username" required>
+              <input type="password" class="form-control" formControlName="lpass" id="password" placeholder="Password" required>
+                <div class="options">
+                    <input type="checkbox" >
+                    <label for="remember">Remember me!</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button>Login</button>
+                <p>Don't have an account?<br><a routerLink="/sign-up">Register</a></p>
+            </form>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!-- 
+  <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5 signup-card">
+        <div class="card-header text-center">
+          <h4>Signup</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+           
+            <div class="mb-3">
+              <label for="username" class="form-label">
+                <i class="bi bi-person"></i> Username
+              </label>
+              <input
+                type="text"
+                formControlName="susername"
+                class="form-control"
+                id="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+
+            
+            <div class="mb-3">
+              <label for="password" class="form-label">
+                <i class="bi bi-lock"></i> Password
+              </label>
+              <input
+                type="password"
+                formControlName="spass"
+                class="form-control"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            
+            <div class="mb-3">
+              <label for="rollNumber" class="form-label">
+                <i class="bi bi-briefcase"></i> Position
+              </label>
+              <input
+                type="text"
+                formControlName="sposition"
+                class="form-control"
+                id="rollNumber"
+                placeholder="Enter your roll number"
+                required
+              />
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary w-100">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ -->
+
+ <div class="signup-container">
+  <form class="signup" onsubmit="return false" autocomplete="off" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <h1>Create account</h1><br><br>
+
+    <div class="signup__field">
+      <input class="signup__input" type="text" formControlName="susername" name="username" id="username" required />
+      <label class="signup__label" for="username">Username</label>
+    </div>
+
+    <div class="signup__field">
+      <input class="signup__input" type="password" name="password" formControlName="spass" id="password" required />
+      <label class="signup__label" for="password">Password</label>
+    </div>
+
+    <div class="signup__field">
+      <input class="signup__input" type="text" name="password" formControlName="sposition" id="position" required />
+      <label class="signup__label" for="position">Position</label>
+    </div>
+
+    <button>Sign up</button>
+  </form>
+</div>
