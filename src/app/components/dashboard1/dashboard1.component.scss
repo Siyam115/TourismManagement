@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  background: #343a40;
+  color: white;
+  padding-top: 200px;
+ 
+}
+.sidebar h4 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sidebar .nav-link {
+  color: #adb5bd;
+  font-size: 16px;
+}
+.sidebar .nav-link.active {
+  background-color: #495057;
+  border-radius: 5px;
+  color: white;
+}
+.main-content {
+  z-index: -20;
+  margin-left: 260px;
+  padding: 20px;
+  width: 80%;
+}
+.section-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+.stats-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.notification-item:last-child {
+  border-bottom: none;
+}

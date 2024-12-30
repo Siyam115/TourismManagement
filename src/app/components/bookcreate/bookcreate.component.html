@@ -1,0 +1,62 @@
+<div class="container-fluid form-container d-flex justify-content-center align-items-center">
+  <form [formGroup]="bookingForm" (ngSubmit)="save()" class="p-4 rounded">
+    <h2 class="text-center text-white mb-4">User Information Form</h2>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="firstName" class="form-label text-white">Your Name</label>
+        <input type="text" class="form-control hover-effect" formControlName="bName" id="firstName" placeholder="Enter your name" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="lastName" class="form-label text-white">Booking Date</label>
+        <input type="text" class="form-control hover-effect" formControlName="bBDate" id="lastName" placeholder="Enter booking date" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="email" class="form-label text-white">Schedule Date</label>
+        <input type="text" class="form-control hover-effect" formControlName="bSdate" id="email" placeholder="Enter schedule date" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="destination" class="form-label text-white">Destination</label>
+        <select class="form-control hover-effect" formControlName="bDestination" id="destination" required>
+          <option value="" disabled selected>Select Destination</option>
+          <option value="Europe">Europe</option>
+          <option value="USA">USA</option>
+          <option value="Asia">Asia</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="country" class="form-label text-white">Cost</label>
+        <input type="text" class="form-control hover-effect" id="country" formControlName="bCost" placeholder="Enter cost" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="contactNumber" class="form-label text-white">Discount</label>
+        <input type="text" class="form-control hover-effect" id="contactNumber" formControlName="bDiscount" placeholder="Enter discount" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="status" class="form-label text-white">Status</label>
+        <input type="text" class="form-control hover-effect" id="status" formControlName="bStatus" placeholder="Enter status" required>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="payment" class="form-label text-white">Payment</label>
+        <input type="text" class="form-control hover-effect" id="payment" formControlName="bPaymetod" placeholder="Enter payment method" required>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </div>
+  </form>
+</div>

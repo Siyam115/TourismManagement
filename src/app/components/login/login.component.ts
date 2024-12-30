@@ -14,7 +14,7 @@ export class LoginComponent {
   constructor(private loginservice: LoginService, private router: Router,private authService: AuthService) { }
 
   loginForm: FormGroup = new FormGroup({
-    
+
     lusername: new FormControl('s'),
     lpass: new FormControl('s'),
     lremember: new FormControl(),
@@ -33,7 +33,9 @@ export class LoginComponent {
           this.loginForm.value.lpass == this.userList[i].spass) {
           localStorage.setItem("isLogin", "true");
           localStorage.setItem("username", this.userList[i].susername);
-          localStorage.setItem("role", this.userList[i].srole);
+          localStorage.setItem("role", "employee");
+          
+
 
           flag = true;
 
@@ -41,8 +43,11 @@ export class LoginComponent {
       }
 
       if (flag == true) {
-        this.authService.changeMessage("true")
-        this.router.navigateByUrl('/home');
+        this.authService.changeMessage("false")
+        this.router.navigateByUrl('/dash1');
+        setTimeout(() => {
+          window.location.reload()
+        }, 200);
       } else {
         alert("Incorrect username or password!")
       }

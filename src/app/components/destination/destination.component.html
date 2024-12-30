@@ -1,0 +1,109 @@
+
+
+  <!-- Carousel Section -->
+  <div id="tourCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/image/paris.jpg" class="d-block w-100" alt="Europe">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Explore Europe</h5>
+          <p>Discover the rich culture and history of Europe.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/image/maldives.jpg" class="d-block w-100" alt="Asia">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Discover Asia</h5>
+          <p>Experience the vibrant traditions and landscapes of Asia.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/image/usa.jpg" class="d-block w-100" alt="USA">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visit the USA</h5>
+          <p>Explore iconic cities and breathtaking national parks.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#tourCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#tourCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+  
+  <!-- Quotes Section -->
+  <div class="quote-section">
+    <p>"Traveling – it leaves you speechless, then turns you into a storyteller." – Ibn Battuta</p>
+    <p>"The world is a book, and those who do not travel read only one page." – Saint Augustine</p>
+  </div>
+
+  <!-- Europe Section -->
+<div class="container">
+  <h2 class="section-title">Europe</h2>
+  <div class="destination-grid">
+    <div class="destination-item">
+      <img src="assets/image/paris.jpg" alt="Paris" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Paris, France</h5>
+      <p>Known as the City of Love, Paris is home to iconic landmarks like the Eiffel Tower.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/rome.jpg" alt="Rome" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Rome, Italy</h5>
+      <p>The Eternal City boasts ancient ruins and world-renowned art and architecture.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/london.jpg" alt="London" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>London, England</h5>
+      <p>A vibrant city known for its history, culture, and iconic landmarks like Big Ben.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Asia Section -->
+<div class="container">
+  <h2 class="section-title">Asia</h2>
+  <div class="destination-grid">
+    <div class="destination-item">
+      <img src="assets/image/tokyo.jpg" alt="Tokyo" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Tokyo, Japan</h5>
+      <p>A bustling metropolis blending modern technology with ancient traditions.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/bangkok.jpg" alt="Bangkok" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Bangkok, Thailand</h5>
+      <p>Famous for its vibrant street life, ornate temples, and delicious food.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/maldives.jpg" alt="Maldives" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Maldives</h5>
+      <p>A tropical paradise known for its crystal-clear waters and luxury resorts.</p>
+    </div>
+  </div>
+</div>
+
+<!-- USA Section -->
+<div class="container">
+  <h2 class="section-title">USA</h2>
+  <div class="destination-grid">
+    <div class="destination-item">
+      <img src="assets/image/ny.jpg" alt="New York" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>New York City</h5>
+      <p>The city that never sleeps, featuring Times Square and Central Park.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/gc.jpg" alt="Grand Canyon" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>Grand Canyon, Arizona</h5>
+      <p>One of the world's natural wonders with breathtaking landscapes.</p>
+    </div>
+    <div class="destination-item">
+      <img src="assets/image/san_francisco.jpg" alt="San Francisco" [routerLink]="['/destination-details']" style="cursor: pointer;">
+      <h5>San Francisco, California</h5>
+      <p>Known for the Golden Gate Bridge, cable cars, and its hilly terrain.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<div class="banner bg-primary text-white py-4 text-center">
+  <h1>Customer Management</h1>
+  <p>Manage your customers efficiently and effectively</p>
+</div>
+
+<div class="container my-5">
+  <!-- Add Customer Section -->
+  <section id="add-customer" class="mb-5">
+    <h2 class="mb-3">Add New Customer</h2>
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="customerName" class="form-label">Customer Name</label>
+        <input type="text" class="form-control" id="customerName" placeholder="Enter customer name">
+      </div>
+      <div class="col-md-6">
+        <label for="customerEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="customerEmail" placeholder="Enter customer email">
+      </div>
+      <div class="col-md-6">
+        <label for="customerPhone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="customerPhone" placeholder="Enter phone number">
+      </div>
+      <div class="col-md-6">
+        <label for="customerAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="customerAddress" placeholder="Enter address">
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-primary">Add Customer</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Customer List Section -->
+  <section id="customer-list" class="mb-5">
+    <h2 class="mb-3">Customer List</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows should be inserted here -->
+          <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>john.doe@example.com</td>
+            <td>+1234567890</td>
+            <td>123 Main St, Anytown</td>
+            <td>
+              <button class="btn btn-warning btn-sm">Edit</button>
+              <button class="btn btn-danger btn-sm">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- How Company Deals with Customers Section -->
+  <section id="customer-dealing" class="mb-5">
+    <h2 class="mb-3">How We Deal with Our Customers</h2>
+    <p>Our company prioritizes customer satisfaction by providing personalized services, quick responses to inquiries, and reliable support. We strive to build long-term relationships by understanding and fulfilling customer needs efficiently.</p>
+  </section>
+
+  <!-- Active Customers Section -->
+  <section id="active-customers" class="mb-5">
+    <h2 class="mb-3">Active Customers</h2>
+    <p>Currently, we have <strong>350 active customers</strong> who trust us with their needs and requirements. We continuously work to enhance their experience with our services.</p>
+  </section>
+
+  <!-- Customer Feedback Section -->
+  <section id="customer-feedback" class="mb-5">
+    <h2 class="mb-3">Customer Feedback</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Feedback</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example feedback rows -->
+          <tr>
+            <td>Jane Smith</td>
+            <td>Excellent service and friendly staff!</td>
+            <td>2024-12-28</td>
+          </tr>
+          <tr>
+            <td>Mark Johnson</td>
+            <td>Quick response and resolution of my issue.</td>
+            <td>2024-12-26</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- Full-Width Responsive Footer -->
+<footer class="footer bg-dark text-white py-3 text-center">
+  <p class="mb-0">&copy; 2024 Customer Management. All Rights Reserved.</p>
+</footer>

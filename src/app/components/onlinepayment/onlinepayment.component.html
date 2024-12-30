@@ -1,0 +1,220 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Choose Your Payment Method</h2>
+    <div class="payment-options d-flex justify-content-around">
+      <!-- Visa -->
+      <div
+        class="payment-option"
+        (click)="setActivePaymentMethod('visaForm')"
+        data-bs-toggle="modal"
+        data-bs-target="#visaModal"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
+          alt="Visa"
+        />
+        <span>Visa Card</span>
+      </div>
+  
+      <!-- MasterCard -->
+      <div
+        class="payment-option"
+        (click)="setActivePaymentMethod('mastercardForm')"
+        data-bs-toggle="modal"
+        data-bs-target="#mastercardModal"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+          alt="MasterCard"
+        />
+        <span>MasterCard</span>
+      </div>
+  
+      <!-- PayPal -->
+      <div
+        class="payment-option"
+        (click)="setActivePaymentMethod('paypalForm')"
+        data-bs-toggle="modal"
+        data-bs-target="#paypalModal"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"
+          alt="PayPal"
+        />
+        <span>PayPal</span>
+      </div>
+    </div>
+  
+    <!-- Visa Modal -->
+    <div
+      class="modal fade"
+      id="visaModal"
+      tabindex="-1"
+      aria-labelledby="visaModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="visaModalLabel">Visa Payment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="visaForm">
+              <div class="mb-3">
+                <label for="visaCardNumber" class="form-label">Card Number</label>
+                <input
+                  type="text"
+                  id="visaCardNumber"
+                  class="form-control"
+                  placeholder="Enter your Visa card number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="visaExpiry" class="form-label">Expiry Date</label>
+                <input
+                  type="text"
+                  id="visaExpiry"
+                  class="form-control"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="visaCVC" class="form-label">CVC</label>
+                <input
+                  type="text"
+                  id="visaCVC"
+                  class="form-control"
+                  placeholder="CVC"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="handlePayment('Visa', 'visaForm')"
+              >
+                Pay with Visa
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- MasterCard Modal -->
+    <div
+      class="modal fade"
+      id="mastercardModal"
+      tabindex="-1"
+      aria-labelledby="mastercardModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="mastercardModalLabel">MasterCard Payment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="mastercardForm">
+              <div class="mb-3">
+                <label for="masterCardNumber" class="form-label">Card Number</label>
+                <input
+                  type="text"
+                  id="masterCardNumber"
+                  class="form-control"
+                  placeholder="Enter your MasterCard number"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="masterExpiry" class="form-label">Expiry Date</label>
+                <input
+                  type="text"
+                  id="masterExpiry"
+                  class="form-control"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="masterCVC" class="form-label">CVC</label>
+                <input
+                  type="text"
+                  id="masterCVC"
+                  class="form-control"
+                  placeholder="CVC"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="handlePayment('MasterCard', 'mastercardForm')"
+              >
+                Pay with MasterCard
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- PayPal Modal -->
+    <div
+      class="modal fade"
+      id="paypalModal"
+      tabindex="-1"
+      aria-labelledby="paypalModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="paypalModalLabel">PayPal Payment</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="paypalForm">
+              <div class="mb-3">
+                <label for="paypalEmail" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="paypalEmail"
+                  class="form-control"
+                  placeholder="Enter your PayPal email"
+                  required
+                />
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="handlePayment('PayPal', 'paypalForm')"
+              >
+                Pay with PayPal
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

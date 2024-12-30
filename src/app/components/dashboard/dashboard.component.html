@@ -1,0 +1,222 @@
+<div class="dashboard-container">
+
+    <!-- Side Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+
+        </div>
+        <ul class="sidebar-menu">
+           
+            
+            <li><a routerLink="/book">Bookings</a></li>
+           
+            <li><a routerLink="/cfd">Customer Insights</a></li>
+            <li><a routerLink="">Financial Insights</a></li>
+           
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content pt-5">
+        <!-- <div class="header-banner">
+        <img src="assets\image\14221910617_2a93a4e071_b.jpg" alt="Tourism Banner" />
+      </div> -->
+
+        <!-- Overview Section -->
+        <div class="overview px-5">
+            <div class="card">
+                <h3>Total Tours</h3>
+                <p>120</p>
+            </div>
+            <div class="card">
+                <h3>Total Bookings</h3>
+                <p>350</p>
+            </div>
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>1000</p>
+            </div>
+            <div class="card">
+                <h3>Pending</h3>
+                <p>20</p>
+            </div>
+            <div class="card">
+                <h3>New Tours Added</h3>
+                <p>15</p>
+            </div>
+        </div>
+
+        <!-- Customer Insights Portal -->
+        <!-- <div class="customer-insights px-5">
+            <h2>Customer Insights</h2>
+            <p>Top customer preferences, most booked tours, customer satisfaction ratings.</p>
+        </div> -->
+
+        <!-- Graphical Insights (Placeholder for charts/graphs) -->
+        <div class="graphical-insights px-5">
+            <h2>Graphical Insights</h2>
+            <p>Here are some insights into bookings and revenue trends over the past months.</p>
+            <div class="chart">
+                <!-- Placeholder for the graph -->
+                <canvas id="insightsGraph"></canvas>
+            </div>
+        </div>
+
+
+        <section class="schedule-trip px-5 my-5">
+            <h2 class="text-center mb-4">Schedule Available Trip Dates</h2>
+            <div class="calendar-container text-center">
+              <mat-form-field appearance="fill" class="w-50 mx-auto">
+                <mat-label>Select a Date</mat-label>
+                <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate" />
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <button class="btn btn-success mt-3" (click)="saveDate()">Save Date</button>
+            </div>
+          </section>
+          
+
+        <!-- Gallery Section -->
+        <div class="gallery container">
+            <h2 class="text-center my-4">Tourism Gallery</h2>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 1"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 2"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 3"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 4"
+                        class="img-fluid rounded shadow" />
+                </div>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 5"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 6"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 7"
+                        class="img-fluid rounded shadow" />
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="assets/image/paris-night-le-dante-cafe.jpg" alt="Tour 8"
+                        class="img-fluid rounded shadow" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Management Policies Section -->
+
+        <section class="policies-section container my-5">
+            <div class="policies-content p-4 rounded shadow bg-light">
+                <h2 class="text-center mb-4">Management Policies</h2>
+                <p>
+                    Here you can find important management policies related to tourism operations, booking procedures,
+                    and user safety guidelines.
+                </p>
+
+                <!-- List of Policies -->
+                <ul class="policies-list">
+                    <li><strong>Booking Confirmation:</strong> All bookings must be confirmed at least 24 hours before
+                        the scheduled tour.</li>
+                    <li><strong>Payment Policy:</strong> A 50% deposit is required at the time of booking, with the
+                        balance due before the tour begins.</li>
+                    <li><strong>Refund Policy:</strong> Refunds are available for cancellations made at least 48 hours
+                        prior to the tour, subject to a processing fee.</li>
+                    <li><strong>Safety Guidelines:</strong> All customers must adhere to safety protocols, including
+                        wearing appropriate gear and following tour leader instructions.</li>
+                    <li><strong>Group Size:</strong> Tours are limited to a maximum of 15 participants to ensure safety
+                        and a personalized experience.</li>
+                    <li><strong>Cancellation Policy:</strong> Tours may be canceled by the management due to weather
+                        conditions or other unforeseen circumstances, with a full refund provided.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- FAQs Section -->
+        <!-- FAQs Section -->
+        <section class="faq-section container my-5">
+            <div class="faq-content p-4 rounded shadow bg-light">
+                <h2 class="text-center mb-4">Frequently Asked Questions (FAQ)</h2>
+                <ul class="faq-list">
+                    <li>
+                        <strong>How can I book a tour?</strong>
+                        <p>Follow the booking steps on the Tours page, select a package, and proceed with payment.</p>
+                    </li>
+                    <li>
+                        <strong>What is the refund policy?</strong>
+                        <p>Refunds are processed within 7-10 business days if cancellation is made at least 48 hours
+                            before the tour.</p>
+                    </li>
+                    <!-- New FAQ Entries -->
+                    <li>
+                        <strong>What should I bring on the tour?</strong>
+                        <p>It is recommended to bring comfortable shoes, a water bottle, sunscreen, and a camera.</p>
+                    </li>
+                    <li>
+                        <strong>Are tours available for private groups?</strong>
+                        <p>Yes, we offer private tours for groups. Please contact us to customize your tour experience.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Is transportation provided for the tours?</strong>
+                        <p>Transportation is included for most tours. Please check the specific tour details for
+                            information on transportation.</p>
+                    </li>
+                    <li>
+                        <strong>Can I modify or reschedule my booking?</strong>
+                        <p>Yes, you can modify or reschedule your booking up to 48 hours before the tour. Additional
+                            fees may apply.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <!-- Footer Section -->
+        <div class="footer bg-dark text-white py-4" style="background-image: url('https://t3.ftcdn.net/jpg/09/70/22/02/360_F_970220235_8o1hErC6OEa9I3PC063XqbNWx4WSlaGQ.jpg'); background-size: cover; background-position: center;">
+            <div class="container text-center">
+                <div class="footer-content">
+                    <span>&copy; 2024 Tourism Management System</span>
+                    <div class="footer-links mt-3">
+                        <a href="#" class="text-white mx-3">Privacy Policy</a>
+                        <a href="#" class="text-white mx-3">Terms & Conditions</a>
+                        <a href="#" class="text-white mx-3">Contact Us</a>
+                    </div>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white mx-2">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="#" class="text-white mx-2">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a href="#" class="text-white mx-2">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>

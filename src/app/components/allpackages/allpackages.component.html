@@ -1,0 +1,48 @@
+<!-- Card Section for Packages -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Our Packages</h2>
+  <div class="row">
+    <div *ngFor="let package of packages" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="package.image" class="card-img-top package-image" alt="{{ package.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">Base Price: ${{ package.price }} (for {{ package.membersIncluded }} members)</p>
+          <a [routerLink]="'/paymentcreate'" (click)="selectPackage(package)">
+            <button class="btn btn-primary">Select</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card Section for Offers -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Our Offers</h2>
+  <div class="row">
+    <div *ngFor="let offer of offers" class="col-md-4 mb-4">
+      <div class="card">
+        <img [src]="offer.image" class="card-img-top package-image" alt="{{ offer.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ offer.name }}</h5>
+          <p class="card-text">Base Price: ${{ offer.price }} (for {{ offer.membersIncluded }} members)</p>
+          <a [routerLink]="'/paymentcreate'" (click)="selectOffer(offer)">
+            <button class="btn btn-primary">Select</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-5">
+  <div class="container-fluid text-center py-3">
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    <p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Contact Us</a>
+    </p>
+  </div>
+</footer>

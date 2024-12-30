@@ -5,12 +5,13 @@
 <a routerLink="log-in"><button class="btn btn-info">LogIn</button></a>&nbsp;
 <a routerLink="sign-up"><button class="btn btn-success">SignUp</button></a>&nbsp;
 <a routerLink="dashboard"><button class="btn btn-warning">Dashboard</button></a>&nbsp;
-<a routerLink="navbar"><button class="btn btn-primary">Navbar</button></a>&nbsp; 
+<a routerLink="navbar"><button class="btn btn-primary">Navbar</button></a>&nbsp;
 
 
 
 <div><router-outlet></router-outlet></div> -->
-<app-navbar *ngIf="sharedMessage=='true'"></app-navbar>
+<!-- <app-navbar *ngIf="sharedMessage=='true'"></app-navbar> -->
+ <app-navbar></app-navbar>
 
 <div class="main-content">
   <router-outlet></router-outlet>

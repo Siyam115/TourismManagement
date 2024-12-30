@@ -1,0 +1,49 @@
+.section-title {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .carousel-inner img {
+  height: 500px; /* Adjust this value to control the height */
+  object-fit: cover;
+}
+
+/* Carousel Caption Styling (Optional for better appearance) */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for captions */
+  padding: 10px;
+  border-radius: 5px;
+}
+  /* Quotes Styling */
+  .quote-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #555;
+  }
+
+  /* Destination Grid */
+  .destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .destination-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .destination-item h5 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .destination-item p {
+    text-align: center;
+    color: #666;
+  }

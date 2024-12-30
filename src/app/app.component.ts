@@ -16,6 +16,11 @@ export class AppComponent implements OnInit{
     this.subscription = this.authservice.currentMessage.subscribe(message =>
       this.sharedMessage = message
     );
+
+  
+    if(localStorage.getItem('isLogin')){
+      this.authservice.changeMessage("true")
+    }
   }
   title = 'authentication';
 

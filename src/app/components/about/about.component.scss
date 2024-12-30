@@ -1,0 +1,44 @@
+/* Welcome Section */
+.welcome-section {
+  background: url('https://images.pexels.com/photos/457937/pexels-photo-457937.jpeg?cs=srgb&dl=pexels-nextvoyage-457937.jpg&fm=jpg') no-repeat center center/cover;
+  height: 500px;
+  position: relative;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+/* Staff Images */
+img.rounded-circle {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  a {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
+}

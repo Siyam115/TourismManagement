@@ -29,6 +29,178 @@
       "susername": "s",
       "spass": "s",
       "sposition": "employee"
+    },
+    {
+      "id": "698e",
+      "susername": "siyam",
+      "spass": "123",
+      "sposition": "employee"
+    },
+    {
+      "id": "3480",
+      "susername": "siyam",
+      "spass": "123",
+      "sposition": "employee"
+    }
+  ],
+  "package": [
+    {
+      "id": "b095",
+      "bfName": "David",
+      "blName": "Jason",
+      "bAge": 30,
+      "bGender": "Male",
+      "bCountry": "Canada",
+      "bContact": "099"
+    },
+    {
+      "id": "f8a7",
+      "bfName": "John",
+      "blName": "Doe",
+      "bemail": null,
+      "bAge": 25,
+      "bGender": "Male",
+      "bCountry": "Australia",
+      "bContact": "0181"
+    },
+    {
+      "id": "2a73",
+      "bfName": null,
+      "blName": null,
+      "bemail": null,
+      "bAge": null,
+      "bGender": null,
+      "bCountry": null,
+      "bContact": null
+    },
+    {
+      "id": "dd41",
+      "bfName": "Davit",
+      "blName": "Warner",
+      "bemail": "xyz@gmail.com",
+      "bAge": 26,
+      "bGender": "Male",
+      "bCountry": "Australia",
+      "bContact": "0181"
+    },
+    {
+      "id": "ee75",
+      "bfName": null,
+      "blName": null,
+      "bemail": null,
+      "bAge": null,
+      "bGender": null,
+      "bCountry": null,
+      "bContact": null
+    },
+    {
+      "id": "1f4c",
+      "bfName": null,
+      "blName": null,
+      "bemail": null,
+      "bAge": null,
+      "bGender": null,
+      "bCountry": null,
+      "bContact": null
+    },
+    {
+      "id": "2973",
+      "bfName": null,
+      "blName": null,
+      "bemail": null,
+      "bAge": null,
+      "bGender": null,
+      "bCountry": null,
+      "bContact": null,
+      "bPackages": null,
+      "bMembers": null,
+      "bPrice": null
+    }
+  ],
+  "payment": [],
+  "packages": [
+    {
+      "id": "1",
+      "name": "Family Pack",
+      "pricePer4Members": 40,
+      "image": "assets/images/family-pack.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Couple Pack",
+      "pricePer2Members": 20,
+      "image": "assets/images/family-pack.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Budget-Friendly Pack",
+      "pricePer4Members": 30,
+      "image": "assets/images/family-pack.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Student Pack",
+      "pricePer1Member": 10,
+      "image": "assets/images/family-pack.jpg"
+    },
+    {
+      "id": "5",
+      "name": "Combo Pack",
+      "pricePer6Members": 50,
+      "image": "assets/images/family-pack.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Adventure Pack",
+      "pricePer4Members": 60,
+      "image": "assets/images/family-pack.jpg"
+    }
+  ],
+  "offers": [
+    {
+      "name": "Summer Sale",
+      "price": 25,
+      "discount": 20,
+      "image": "assets/images/summer-sale.jpg",
+      "id": "8a53"
+    },
+    {
+      "name": "Holiday Special",
+      "price": 35,
+      "discount": 15,
+      "image": "assets/images/holiday-special.jpg",
+      "id": "6d78"
+    },
+    {
+      "name": "Weekend Bonanza",
+      "price": 45,
+      "discount": 10,
+      "image": "assets/images/weekend-bonanza.jpg",
+      "id": "fe98"
+    }
+  ],
+  "bookdetails": [
+    {
+      "id": "7436",
+      "bName": null,
+      "bBDate": null,
+      "bSdate": null,
+      "bDestination": null,
+      "bCost": null,
+      "bDiscount": null,
+      "bStatus": null,
+      "bPaymetod": null
+    },
+    {
+      "id": "b0b0",
+      "bName": "John",
+      "bBDate": "11/11/2024",
+      "bSdate": "11/01/2025",
+      "bDestination": "Europe",
+      "bCost": "27",
+      "bDiscount": "10%",
+      "bStatus": "confirmed",
+      "bPaymetod": "VISA card"
     }
   ]
 }

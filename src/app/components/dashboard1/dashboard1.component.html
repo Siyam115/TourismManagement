@@ -1,0 +1,173 @@
+<!-- Sidebar -->
+<div class="sidebar">
+  <h4>Tourism Dashboard</h4>
+  <nav class="nav flex-column">
+    <a (click)="currentTab='overview'"  [className]="currentTab=='overview'? 'nav-link active':'nav-link'">Overview</a>
+    <a (click)="currentTab='bookings'" [className]="currentTab=='bookings'? 'nav-link active':'nav-link'">Booking Management</a>
+    <a (click)="currentTab='customers'" [className]="currentTab=='customers'? 'nav-link active':'nav-link'">Customer Management</a>
+    <a (click)="currentTab='revenue'" [className]="currentTab=='revenue'? 'nav-link active':'nav-link'">Revenue & Analytics</a>
+    <a (click)="currentTab='notifications'" [className]="currentTab=='notifications'? 'nav-link active':'nav-link'">Notifications</a>
+  </nav>
+</div>
+
+<!-- Main Content -->
+<div class="main-content" *ngIf="currentTab=='overview'">
+  <div></div>
+  <!-- Overview Section -->
+  <section id="overview">
+    <h2 class="section-title">Overview</h2>
+    <div class="row g-3">
+      <div class="col-md-3">
+        <div class="stats-card text-center">
+          <h4>Total Bookings</h4>
+          <p class="display-6">450</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stats-card text-center">
+          <h4>Monthly Revenue</h4>
+          <p class="display-6">$15,000</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stats-card text-center">
+          <h4>Active Packages</h4>
+          <p class="display-6">25</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stats-card text-center">
+          <h4>New Customers</h4>
+          <p class="display-6">120</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Management Section -->
+  <section id="bookings" class="mt-5">
+    <h2 class="section-title">Booking Management</h2>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Customer Name</th>
+          <th>Package</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>Family Pack</td>
+          <td>2024-12-20</td>
+          <td><span class="badge bg-success">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>Adventure Pack</td>
+          <td>2024-12-22</td>
+          <td><span class="badge bg-warning">Pending</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Customer Management Section -->
+  <section id="customers" class="mt-5">
+    <h2 class="section-title">Customer Management</h2>
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Total Bookings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>john@example.com</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>jane@example.com</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Revenue and Analytics Section -->
+  <section id="revenue" class="mt-5">
+    <h2 class="section-title">Revenue & Analytics</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="stats-card">
+          <h5>Revenue Graph</h5>
+          <p>Placeholder for a chart.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stats-card">
+          <h5>Top Packages</h5>
+          <p>Placeholder for a bar chart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notifications Section -->
+  <section id="notifications" class="mt-5">
+    <h2 class="section-title">Notifications</h2>
+    <div class="notification-item">
+      <strong>New Booking:</strong> Jane Smith booked the Adventure Pack.
+    </div>
+    <div class="notification-item">
+      <strong>Payment Received:</strong> $500 from John Doe.
+    </div>
+  </section>
+</div>
+
+<app-bookings  class="main-content"  *ngIf="currentTab=='bookings'"></app-bookings>
+
+<app-customermanagement  class="main-content"  *ngIf="currentTab=='customers'"></app-customermanagement>
+
+<div *ngIf="currentTab=='revenue'"  class="main-content" >
+  <section id="revenue" class="mt-5">
+    <h2 class="section-title">Revenue & Analytics</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="stats-card">
+          <h5>Revenue Graph</h5>
+          <p>Placeholder for a chart.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="stats-card">
+          <h5>Top Packages</h5>
+          <p>Placeholder for a bar chart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="currentTab=='notifications'"  class="main-content" >
+  <section id="notifications" class="mt-5">
+    <h2 class="section-title">Notifications</h2>
+    <div class="notification-item">
+      <strong>New Booking:</strong> Jane Smith booked the Adventure Pack.
+    </div>
+    <div class="notification-item">
+      <strong>Payment Received:</strong> $500 from John Doe.
+    </div>
+  </section>
+</div>

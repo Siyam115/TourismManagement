@@ -34,4 +34,9 @@ header {
   .navbar li a.active {
     background: #1abc9c;
   }
-  
+  .navbar button.active,
+.navbar a.active {
+  background: #1abc9c;
+  color: white;
+  border: none;
+}
